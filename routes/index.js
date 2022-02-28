@@ -3,7 +3,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('index', {
-    title: "Discuss Ideas With Like-Minded People | Clubhouse 🧠 💡",
+    title: "Validate Your Idea Straight From Market Target | Clubhouse 🧠 💡",
+    user: req.user
   })
 })
 
