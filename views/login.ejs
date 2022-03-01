@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="w-screen h-screen flex flex-col items-center gap-40">
+    <div id="title-container" class="w-full h-1/5 flex items-center justify-center">
+      <h1 class="text-4xl text-gray-600">Please Log In</h1>
+    </div>
+    <div id="form-container" class="w-full flex flex-col items-center text-gray-600 gap-4">
+      <form
+        class="w-96 border rounded-md border-gray-100 bg-gray-50 flex flex-col items-center gap-2 py-4 tracking-wide"
+        action="/login" method="post">
+        <div class="element-container w-9/12 flex flex-col font-bold">
+          <label for="username" class="text-sm">Username:</label>
+          <input class="border rounded-sm border-blue-200 outline-none p-1 focus:border-blue-500 transition ease-in-out"
+            type="text" name="username" id="username" required>
+        </div>
+        <div class="element-container w-9/12 flex flex-col font-bold">
+          <label for="password" class="text-sm">Password:</label>
+          <input class="border rounded-sm border-blue-200 outline-none p-1 focus:border-blue-500 transition ease-in-out"
+            type="password" name="password" id="password" required>
+          <span class="text-xs text-blue-500 my-1">
+            <a href="/">forgot password?</a>
+          </span>
+        </div>
+        <div class="element-container w-9/12">
+          <button
+            class="w-full rounded-md font-bold text-white my-2 p-1.5 outline-none bg-blue-500 shadow-lg shadow-blue-500/50 focus:bg-blue-600 transition ease-in-out"
+            type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+      <div class="text-blue-500">
+        <a href="/signup">
+          Create Account
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

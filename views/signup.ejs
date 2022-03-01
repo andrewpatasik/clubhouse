@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/d0d73e6caa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="w-screen h-screen flex flex-col items-center gap-40">
+    <div id="title-container" class="w-full h-1/5 relative flex items-center justify-center">
+      <div class="absolute left-10 top-10 text-blue-500">
+        <a href="/">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          Back to homepage
+        </a>
+      </div>
+      <h1 class="text-4xl text-gray-600">Sign Up</h1>
+    </div>
+    <div id="form-container" class="w-full flex justify-center text-gray-600">
+      <form class="w-96 border rounded-md border-gray-100 bg-gray-50 flex flex-col items-center gap-2 py-4 tracking-wide" action="" method="post">
+        <div class="element-container w-9/12 flex flex-col font-bold">
+          <label for="username" class="text-sm">Username:</label>
+          <input class="border rounded-sm border-blue-200 outline-none p-1 focus:border-blue-500 transition ease-in-out"
+            type="text" name="username" id="username" required>
+        </div>
+        <div class="element-container w-9/12 flex flex-col font-bold">
+          <label for="password" class="text-sm">Password:</label>
+          <input class="border rounded-sm border-blue-200 outline-none p-1 focus:border-blue-500 transition ease-in-out"
+            type="password" name="password" id="password" required>
+        </div>
+        <div class="element-container w-9/12">
+          <button class="w-full rounded-md font-bold text-white my-2 p-1.5 outline-none bg-blue-500 shadow-lg shadow-blue-500/50 focus:bg-blue-600 transition ease-in-out" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
