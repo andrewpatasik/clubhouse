@@ -4,7 +4,11 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('index', {
     title: "Validate Your Idea Straight From Market Target | Clubhouse 🧠 💡",
-    user: req.user
+    user: req.user,
+    data: [
+      { name: 'Armin Artlert', username: 'armin' },
+      { name: 'Mikasa Ackerman', username: 'mikasa' },
+    ]
   })
 })
 

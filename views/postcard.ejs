@@ -1,0 +1,36 @@
+<div class="postcard-container bg-white flex p-2 gap-2 border-b">
+  <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
+  <div class="post-detail w-full text-sm">
+    <p class="user-name text-sm font-bold"><%= user.name %> <span class="font-normal text-gray-400">@<%= user.username %>  -
+        5d</span></p>
+    <p class="post-title font-bold">I want to create a podcast that talk about coding for kids
+    </p>
+    <p class="post-content w-full truncate">Quisque vitae egestas sapien, vel iaculis massa. Duis ut vehicula
+      diam, in luctus dolor. Pellentesque sit amet mi purus. Class aptent taciti sociosqu ad litora torquent
+      per
+      conubia nostra, per inceptos himenaeos. Etiam tempus in risus et ullamcorper.</p>
+    <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
+      <div class="post-seen-count flex items-center text-xs">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+        <span>30</span>
+      </div>
+      <div class="post-upvote-count flex items-center text-xs">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+        </svg>
+        <span>60</span>
+      </div>
+      <div class="post-comment-count flex items-center text-xs">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+        <span>15</span>
+      </div>
+    </div>
+  </div>
+</div>

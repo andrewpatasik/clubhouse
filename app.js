@@ -1,10 +1,12 @@
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const app = express();
 
 const indexRoute = require('./routes/index');
 
-app.set('views', path.join(__dirname, 'views'));
+app.use(expressLayouts);
+app.set('layout', './layouts/default')
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
