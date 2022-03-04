@@ -13,11 +13,19 @@ router.get('/', (req, res) => {
 })
 
 router.get('/signup', (req, res) => {
-  res.render('signup')
+  res.render('signup', {
+    layout: '../views/layouts/sign-form',
+    title: 'Sign Up',
+    pageName: 'signup'
+  })
 })
 
 router.get('/login', (req, res) => {
-  res.render('login')
+  res.render('login', {
+    layout: '../views/layouts/sign-form',
+    title: 'Log In',
+    pageName: 'login'
+  })
 })
 
 module.exports = router;
