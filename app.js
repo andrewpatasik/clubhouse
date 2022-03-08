@@ -2,6 +2,13 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const app = express();
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGODB_URL);
+
+const db = mongoose.connection;
+db.on('error', console.error.bind('connection error'));
 
 const indexRoute = require('./routes/index');
 
