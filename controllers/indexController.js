@@ -1,13 +1,17 @@
-const postModel = require('../models/post');
+const Post = require('../models/post');
+const User = require('../models/user');
 const async = require('async');
 
 exports.index = (req, res, next) => {
-  res.render('index', {
-    title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
-    user: req.user,
-    data: [
-      { name: 'Armin Artlert', username: 'armin' },
-      { name: 'Mikasa Ackerman', username: 'mikasa' },
-    ]
-  })
-}
+  Post.find({})
+    .populate('user')
+    .exec((err, result) => {
+      if (err) return next(err)
+
+      res.render('index', {
+        title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+        user: req.user,
+        feed: result 
+      })
+    })
+};

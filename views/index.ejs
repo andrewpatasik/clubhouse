@@ -1,4 +1,4 @@
 <%- contentFor('feed') %>
-  <% data.forEach(user => { %>
-    <%- include('./postcard', { user }) %>  
+  <% feed.forEach(data => { %>
+    <%- include('./postcard', { data }) %>  
   <% }) %>
