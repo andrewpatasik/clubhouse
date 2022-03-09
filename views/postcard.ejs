@@ -1,8 +1,13 @@
 <div class="postcard-container bg-white flex p-2 m-2 gap-2 border-b">
   <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
   <div class="post-detail w-full text-sm">
-    <p class="user-name text-sm font-bold"><%= data.user.name %> <span class="font-normal text-gray-400">@<%= data.user.username %>  -
-        5d</span></p>
+    <p class="user-name text-sm font-bold">
+      <% if (!user) { %>
+        Anonymous <span class="font-normal text-gray-400">@clubhousemember -
+        <% } else { %>
+        <%= data.user.name %> <span class="font-normal text-gray-400">@<%= data.user.username %> -
+          <% } %>
+          5d</span></p>
     <p class="post-title font-bold"><%= data.postTitle %> </p>
     <p class="post-content w-full"><%= data.postContent %> </p>
     <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">

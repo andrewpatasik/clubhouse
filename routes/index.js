@@ -11,14 +11,11 @@ router.get('/signup', (req, res) => {
     title: 'Sign Up',
     pageName: 'signup'
   })
-})
+});
 
-router.get('/login', (req, res) => {
-  res.render('login', {
-    layout: '../views/layouts/sign-form',
-    title: 'Log In',
-    pageName: 'login'
-  })
-})
+router.get('/login', indexController.login_get);
+router.post('/login', indexController.login_post);
+
+router.post('/logout', indexController.logout_post);
 
 module.exports = router;
