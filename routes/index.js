@@ -3,7 +3,9 @@ const router = express.Router();
 
 const indexController = require('../controllers/indexController');
 
-router.get('/', indexController.index)
+router.get('/', indexController.index);
+
+router.get('/feed', indexController.feed);
 
 router.get('/signup', (req, res) => {
   res.render('signup', {

@@ -3,23 +3,37 @@ const passport = require('passport');
 const Post = require('../models/post');
 
 exports.index = (req, res, next) => {
-  Post.find({})
-    .populate('user')
-    .exec((err, result) => {
-      if (err) return next(err)
+  if (!req.isAuthenticated()) {
+    Post.find({})
+      .populate('user')
+      .exec((err, result) => {
+        if (err) return next(err)
 
-      console.log(req.isAuthenticated());
-
-      res.render('index', {
-        title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
-        user: req.user,
-        feed: result 
+        res.render('index', {
+          title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+          user: req.user,
+          feed: result
+        })
       })
-    })
+  } else {
+    res.redirect('/feed');
+  }
+
 };
 
+exports.feed = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    res.render('feed', {
+      title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+      user: req.user,
+    })
+  } else {
+    res.redirect('/');
+  }
+}
+
 exports.login_get = (req, res, next) => {
-    res.render('login', {
+  res.render('login', {
     layout: '../views/layouts/sign-form',
     title: 'Log In',
     pageName: 'login'
