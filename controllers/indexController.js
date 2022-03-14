@@ -18,15 +18,21 @@ exports.index = (req, res, next) => {
   } else {
     res.redirect('/feed');
   }
-
 };
 
 exports.feed = (req, res, next) => {
   if (req.isAuthenticated()) {
-    res.render('feed', {
-      title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
-      user: req.user,
-    })
+    Post.find({})
+      .populate('user')
+      .exec((err, result) => {
+        if (err) return next(err)
+
+        res.render('feed', {
+          title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+          user: req.user,
+          feed: result
+        })
+      })
   } else {
     res.redirect('/');
   }

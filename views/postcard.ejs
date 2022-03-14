@@ -1,9 +1,16 @@
 <div class="postcard-container bg-white flex p-2 m-2 gap-2 border-b">
-  <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
+  <% if (!user) { %>
+  <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16 "></div>
+  <% } else { %>
+  <div class="user-photo flex flex-shrink-0 rounded-full bg-gray-100 w-16 h-16 justify-center items-center font-bold">
+    <span><%= data.user.name[0] %></span>
+  </div>
+  <% } %>
+
   <div class="post-detail w-full text-sm">
     <p class="user-name text-sm font-bold">
       <% if (!user) { %>
-        Anonymous <span class="font-normal text-gray-400">@clubhousemember -
+      Anonymous <span class="font-normal text-gray-400">@clubhousemember -
         <% } else { %>
         <%= data.user.name %> <span class="font-normal text-gray-400">@<%= data.user.username %> -
           <% } %>

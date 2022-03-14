@@ -1,176 +1,176 @@
 <%- contentFor('navLogin') %>
-  <li><a href="/login" class="transform ease-in-out hover:text-indigo-700 ">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-      </svg>
-      <span class="font-bold">Log In
-      </span>
-    </a></li>
+<li><a href="/login" class="transform ease-in-out hover:text-indigo-700 ">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+    </svg>
+    <span class="font-bold">Log In
+    </span>
+  </a></li>
 
 <%- contentFor('navLogout') %>
-  <li>
-    <form action="/logout" method="post" class="transform ease-in-out hover:text-indigo-700 ">
-      <button type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-        </svg>
-        <span class="font-bold">Log Out
-        </span>
-      </button>
-    </form>
-  </li>
+<li>
+  <form action="/logout" method="post" class="transform ease-in-out hover:text-indigo-700 ">
+    <button type="submit">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+      </svg>
+      <span class="font-bold">Log Out
+      </span>
+    </button>
+  </form>
+</li>
 
 <%- contentFor('main') %>
-  <div id="preview-feed" class="relative -top-20 w-3/4 flex self-center justify-between p-8">
-    <article id="caption" class="self-end">
-      <h3>Share Your Story On Clubhouse And See<br>How People React On It.</h3>
-    </article>
-    <article id="feed-content" class="w-2/5 flex flex-col gap-4">
-      <!-- post 1 -->
-      <div class="postcard-container bg-white flex shadow rounded-md p-2 gap-2">
-        <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
-        <div class="post-detail w-full text-sm">
-          <p class="user-name text-sm font-bold">Eren Yeager <span class="font-normal text-gray-400">@erenrumbling -
-              3d</span></p>
-          <p class="post-title font-bold">I want to sell food online where I don't need a place to open my business
-          </p>
-          <p class="post-content w-96 truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id
-            eleifend risus.
-            Praesent a tellus arcu. Ut ac ante vel nibh blandit placerat sed ut velit. Morbi pellentesque aliquet
-            diam, eget venenatis erat.</p>
-          <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
-            <div class="post-seen-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              <span>30</span>
-            </div>
-            <div class="post-upvote-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
-              </svg>
-              <span>60</span>
-            </div>
-            <div class="post-comment-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-              <span>15</span>
-            </div>
+<div id="preview-feed" class="relative -top-20 w-3/4 flex self-center justify-between p-8">
+  <article id="caption" class="self-end">
+    <h3>Share Your Story On Clubhouse And See<br>How People React On It.</h3>
+  </article>
+  <article id="feed-content" class="w-2/5 flex flex-col gap-4">
+    <!-- post 1 -->
+    <div class="postcard-container bg-white flex shadow rounded-md p-2 gap-2">
+      <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
+      <div class="post-detail w-full text-sm">
+        <p class="user-name text-sm font-bold">Eren Yeager <span class="font-normal text-gray-400">@erenrumbling -
+            3d</span></p>
+        <p class="post-title font-bold">I want to sell food online where I don't need a place to open my business
+        </p>
+        <p class="post-content w-96 truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id
+          eleifend risus.
+          Praesent a tellus arcu. Ut ac ante vel nibh blandit placerat sed ut velit. Morbi pellentesque aliquet
+          diam, eget venenatis erat.</p>
+        <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
+          <div class="post-seen-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span>30</span>
+          </div>
+          <div class="post-upvote-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+            </svg>
+            <span>60</span>
+          </div>
+          <div class="post-comment-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+            <span>15</span>
           </div>
         </div>
       </div>
-      <!-- post 2 -->
-      <div class="postcard-container bg-white flex shadow rounded-md p-2 gap-2">
-        <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
-        <div class="post-detail w-full text-sm">
-          <p class="user-name text-sm font-bold">Mikasa Ackerman <span class="font-normal text-gray-400">@mikasa - 23
-              Feb</span></p>
-          <p class="post-title font-bold">I have an app idea where people can get the important content of recipes
-            from any website
-          </p>
-          <p class="post-content w-96 truncate">Nullam accumsan arcu et ipsum pharetra laoreet. Pellentesque nec
-            ultrices lorem, ac congue dolor. Praesent rhoncus consectetur ligula, eget accumsan orci varius sit amet.
-          </p>
-          <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
-            <div class="post-seen-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              <span>30</span>
-            </div>
-            <div class="post-upvote-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
-              </svg>
-              <span>60</span>
-            </div>
-            <div class="post-comment-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-              <span>15</span>
-            </div>
+    </div>
+    <!-- post 2 -->
+    <div class="postcard-container bg-white flex shadow rounded-md p-2 gap-2">
+      <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
+      <div class="post-detail w-full text-sm">
+        <p class="user-name text-sm font-bold">Mikasa Ackerman <span class="font-normal text-gray-400">@mikasa - 23
+            Feb</span></p>
+        <p class="post-title font-bold">I have an app idea where people can get the important content of recipes
+          from any website
+        </p>
+        <p class="post-content w-96 truncate">Nullam accumsan arcu et ipsum pharetra laoreet. Pellentesque nec
+          ultrices lorem, ac congue dolor. Praesent rhoncus consectetur ligula, eget accumsan orci varius sit amet.
+        </p>
+        <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
+          <div class="post-seen-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span>30</span>
+          </div>
+          <div class="post-upvote-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+            </svg>
+            <span>60</span>
+          </div>
+          <div class="post-comment-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+            <span>15</span>
           </div>
         </div>
       </div>
-      <!-- post 3 -->
-      <div class="postcard-container bg-white flex shadow rounded-md p-2 gap-2">
-        <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
-        <div class="post-detail w-full text-sm">
-          <p class="user-name text-sm font-bold">Armin Artlert <span class="font-normal text-gray-400">@armin -
-              5d</span></p>
-          <p class="post-title font-bold">I want to create a podcast that talk about coding for kids
-          </p>
-          <p class="post-content w-96 truncate">Quisque vitae egestas sapien, vel iaculis massa. Duis ut vehicula
-            diam, in luctus dolor. Pellentesque sit amet mi purus. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Etiam tempus in risus et ullamcorper.</p>
-          <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
-            <div class="post-seen-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              <span>30</span>
-            </div>
-            <div class="post-upvote-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
-              </svg>
-              <span>60</span>
-            </div>
-            <div class="post-comment-count flex items-center text-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-              <span>15</span>
-            </div>
+    </div>
+    <!-- post 3 -->
+    <div class="postcard-container bg-white flex shadow rounded-md p-2 gap-2">
+      <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16"></div>
+      <div class="post-detail w-full text-sm">
+        <p class="user-name text-sm font-bold">Armin Artlert <span class="font-normal text-gray-400">@armin -
+            5d</span></p>
+        <p class="post-title font-bold">I want to create a podcast that talk about coding for kids
+        </p>
+        <p class="post-content w-96 truncate">Quisque vitae egestas sapien, vel iaculis massa. Duis ut vehicula
+          diam, in luctus dolor. Pellentesque sit amet mi purus. Class aptent taciti sociosqu ad litora torquent per
+          conubia nostra, per inceptos himenaeos. Etiam tempus in risus et ullamcorper.</p>
+        <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
+          <div class="post-seen-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span>30</span>
+          </div>
+          <div class="post-upvote-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+            </svg>
+            <span>60</span>
+          </div>
+          <div class="post-comment-count flex items-center text-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+            <span>15</span>
           </div>
         </div>
       </div>
-    </article>
-  </div>
-  <section id="platform" class="grid grid-cols-3 gap-4">
-    <article class="grid grid-rows-4 justify-end items-end">
-      <h6 class="tracking-wide">Your identity will be kept anonymous in public,<br>only your story what matters in
-        Clubhouse.</h6>
-    </article>
-    <article>
-      <h3 class="text-indigo-500 text-center">Take A Sneek-Peek To Clubhouse</h3>
-      <div id="platform-content" class="h-[42rem] flex flex-col my-20 overflow-y-scroll">
-        <% feed.forEach(data => { %>
-          <%- include('./postcard', { data }) %>  
-        <% }) %>
-      </div>
-    </article>
-    <article class="grid grid-rows-4 justify-start">
-      <div></div>
-      <div></div>
-      <div></div>
-      <h6 class="tracking-wide">Read other people story and find what really speaks to you.</h6>
-    </article>
-  </section>
+    </div>
+  </article>
+</div>
+<section id="platform" class="grid grid-cols-3 gap-4">
+  <article class="grid grid-rows-4 justify-end items-end">
+    <h6 class="tracking-wide">Your identity will be kept anonymous in public,<br>only your story what matters in
+      Clubhouse.</h6>
+  </article>
+  <article>
+    <h3 class="text-indigo-500 text-center">Take A Sneek-Peek To Clubhouse</h3>
+    <div id="platform-content" class="h-[42rem] flex flex-col my-20 overflow-y-scroll">
+      <% feed.forEach(data => { %>
+      <%- include('./postcard', { data }) %>
+      <% }) %>
+    </div>
+  </article>
+  <article class="grid grid-rows-4 justify-start">
+    <div></div>
+    <div></div>
+    <div></div>
+    <h6 class="tracking-wide">Read other people story and find what really speaks to you.</h6>
+  </article>
+</section>
