@@ -1,9 +1,5 @@
 const express = require('express');
-const cheerio = require('cheerio');
 const Post = require('../models/post');
-const {
-  html
-} = require('cheerio/lib/static');
 
 exports.feed = [
   (req, res, next) => {
@@ -33,7 +29,7 @@ exports.feed_post = (req, res) => {
   res.json({
     data: {
       title: req.body.title,
-      content: req.body.content
+      content: JSON.parse(req.body.content)
     }
   })
 }
