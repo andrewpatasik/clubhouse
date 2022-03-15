@@ -14,6 +14,7 @@ const User = require('./models/user');
 
 
 const indexRoute = require('./routes/index');
+const feedRoute = require('./routes/feed');
 
 
 const app = express();
@@ -91,6 +92,7 @@ app.use(express.urlencoded({
 
 
 app.use('/', indexRoute);
+app.use('/feed', feedRoute);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log('Server is running at port 3000')

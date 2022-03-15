@@ -109,6 +109,14 @@
       var quill = new Quill('#editor', {
         theme: 'snow'
       });
+
+      let form = document.querySelector('form[name=editor]');
+      console.log(form)
+      form.onsubmit = function () {
+        let content = document.querySelector('input[name=content]');
+        content.value = JSON.stringify(quill.getContents())
+        console.log('success')
+      }
     </script>
 </body>
 
