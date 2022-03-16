@@ -22,4 +22,8 @@ const postSchema = new Schema({
   },
 })
 
+postSchema.virtual('relativeTime').get(function() {
+  return moment(this.postDate).fromNow();
+})
+
 module.exports = mongoose.model('Post', postSchema);

@@ -1,4 +1,6 @@
 const express = require('express');
+const moment = require('moment');
+
 const Post = require('../models/post');
 
 exports.feed = [

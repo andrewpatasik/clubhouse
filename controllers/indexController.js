@@ -9,6 +9,7 @@ exports.index = (req, res, next) => {
       .exec((err, result) => {
         if (err) return next(err)
 
+
         res.render('index', {
           title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
           user: req.user,
