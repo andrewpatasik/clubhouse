@@ -1,7 +1,12 @@
 const express = require('express');
 const moment = require('moment');
+const {
+  body,
+  validationResult
+} = require('express-validator');
 
 const Post = require('../models/post');
+const User = require('../models/user');
 
 exports.feed = [
   (req, res, next) => {
@@ -26,12 +31,22 @@ exports.feed = [
   }
 ]
 
-exports.feed_post = (req, res) => {
-  console.log(req.body)
-  res.json({
-    data: {
-      title: req.body.title,
-      content: JSON.parse(req.body.content)
-    }
-  })
-}
+exports.feed_post = [
+  (req, res, next) => {
+    res.locals.content = req.body.content.replace(/\\n/g, "\\n");
+    next();
+  },
+  (req, res) => {
+    let post = new Post({
+      user: req.user,
+      postDate: new Date(),
+      postTitle: req.body.title,
+      postContent: res.locals.content
+    })
+
+    post.save((err) => {
+      if (err) return next(err);
+      res.redirect('/feed');
+    })
+  }
+]
