@@ -51,3 +51,16 @@ exports.feed_post = [
     })
   }
 ]
+
+exports.feed_user_post = (req, res) => {
+  Post.findById(req.params.id)
+    .populate('user')
+    .exec((err, result) => {
+      if (err) return next(err);
+      res.render('post', {
+        user: req.user,
+        title: `${result.postTitle} by ${result.user.username}`,
+        data: result 
+      })
+    })
+}
