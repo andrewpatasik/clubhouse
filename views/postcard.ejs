@@ -16,7 +16,7 @@
           <% } %>
           <%= data.relativeTime %> </span></p>
     <p class="post-title font-bold"><%= data.postTitle %> </p>
-    <div id="contentBox" class="post-content w-full"></div>
+    <p id="contentBox" class="post-content w-full"><%= data.postContentPreview %> </p>
     <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
       <div class="post-seen-count flex items-center text-xs">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -42,12 +42,3 @@
     </div>
   </div>
 </div>
-<script>
-  let content = <%- data.postContent %>;
-  let contentBox = new Quill('#contentBox', {
-    theme: 'bubble',
-    readOnly: true
-  })
-
-  contentBox.setContents(content)
-</script>

@@ -41,7 +41,8 @@ exports.feed_post = [
       user: req.user,
       postDate: new Date(),
       postTitle: req.body.title,
-      postContent: res.locals.content
+      postContent: res.locals.content,
+      postContentPreview: req.body.preview
     })
 
     post.save((err) => {

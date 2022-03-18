@@ -20,6 +20,9 @@ const postSchema = new Schema({
   postContent: {
     type: String
   },
+  postContentPreview: {
+    type: String
+  }
 })
 
 postSchema.virtual('relativeTime').get(function() {
