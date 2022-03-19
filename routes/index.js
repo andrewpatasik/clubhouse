@@ -13,6 +13,10 @@ router.get('/signup', (req, res) => {
   })
 });
 
+router.post('/signup', (req, res, next) => {
+  res.send('POST: NOT IMPLEMENTED')
+});
+
 router.get('/login', indexController.login_get);
 router.post('/login', indexController.login_post);
 
