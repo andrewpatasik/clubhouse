@@ -16,8 +16,14 @@
           <% } %>
           <%= data.relativeTime %> </span></p>
     <p class="post-title font-bold"><%= data.postTitle %> </p>
-    <p id="contentBox" class="post-content w-full"><%= data.postContentPreview %> </p>
-    <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
+    <p id="contentBox" class="post-content w-full  max-h-20 overflow-hidden">
+      <%-
+        data.postContentPreview.length <= 50 ? data.postContentPreview : data.postContentPreview.slice(0, 350)
+          .trimEnd()
+          .concat('...')
+      %> 
+    </p>
+    <!-- <div class="post-statistic flex justify-start gap-1 mt-1 text-gray-400">
       <div class="post-seen-count flex items-center text-xs">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -39,6 +45,6 @@
         </svg>
         <span>15</span>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

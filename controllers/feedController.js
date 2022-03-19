@@ -23,7 +23,7 @@ exports.feed = [
         if (err) return next(err)
 
         res.render('feed', {
-          title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+          title: "Share Your Story To Be Heard | Overheard 🧠 💡",
           user: req.user,
           feed: result
         })

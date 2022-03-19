@@ -10,7 +10,7 @@ exports.index = (req, res, next) => {
         if (err) return next(err)
 
         res.render('index', {
-          title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+          title: "Share Your Story To Be Heard | Overheard 🧠 💡",
           user: req.user,
           feed: result
         })

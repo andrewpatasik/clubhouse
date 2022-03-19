@@ -74,12 +74,27 @@
     <h1>My Feed</h4>
       <div id="platform-content" class="h-[42rem] flex flex-col overflow-y-scroll mt-4">
         <% feed.forEach(data => { %>
-          <a href=<%- data.url %>>
-            <%- include('./postcard', { data }) %>
-          </a>
+        <a href=<%- data.url %>>
+          <%- include('./postcard', { data }) %>
+        </a>
         <% }) %>
       </div>
   </article>
   <article class="grid grid-rows-4 justify-start">
   </article>
 </section>
+<!-- Initialize Quill editor -->
+<script>
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    placeholder: 'What\'s on your mind?'
+  });
+
+  let form = document.querySelector('form[name=editor]');
+  form.onsubmit = function () {
+    let content = document.querySelector('input[name=content]');
+    let preview = document.querySelector('input[name=preview]');
+    content.value = JSON.stringify(quill.getContents());
+    preview.value = quill.getText();
+  }
+</script>
