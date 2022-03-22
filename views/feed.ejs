@@ -56,11 +56,13 @@
     <div class="row-span-3 self-end">
       <form action="/feed/post" method="post" class="flex flex-col" name="editor">
         <h3>Share your<br>thoughts</h3>
-        <input type="text" id="title" name="title" placeholder="Title" class="border border-1 border-gray-300 my-2 h-10 pl-2">
+        <input type="text" id="title" name="title" placeholder="Title"
+          class="border border-1 border-gray-300 my-2 h-10 pl-2">
         <!-- Create the editor container -->
         <div id="editor" class="h-40">
         </div>
         <input type="hidden" name="content">
+        <input type="hidden" name="preview">
         <button type="submit"
           class="bg-indigo-500 hover:bg-indigo-700 shadow-lg shadow-indigo-500/50 text-white py-2 px-4 rounded-sm mt-2 w-1/5 self-end tracking-wide">
           Post
@@ -72,10 +74,27 @@
     <h1>My Feed</h4>
       <div id="platform-content" class="h-[42rem] flex flex-col overflow-y-scroll mt-4">
         <% feed.forEach(data => { %>
-        <%- include('./postcard', { data }) %>
+        <a href=<%- data.url %>>
+          <%- include('./postcard', { data }) %>
+        </a>
         <% }) %>
       </div>
   </article>
   <article class="grid grid-rows-4 justify-start">
   </article>
 </section>
+<!-- Initialize Quill editor -->
+<script>
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    placeholder: 'What\'s on your mind?'
+  });
+
+  let form = document.querySelector('form[name=editor]');
+  form.onsubmit = function () {
+    let content = document.querySelector('input[name=content]');
+    let preview = document.querySelector('input[name=preview]');
+    content.value = JSON.stringify(quill.getContents());
+    preview.value = quill.getText();
+  }
+</script>

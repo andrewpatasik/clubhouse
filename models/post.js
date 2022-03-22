@@ -20,10 +20,17 @@ const postSchema = new Schema({
   postContent: {
     type: String
   },
+  postContentPreview: {
+    type: String
+  }
 })
 
 postSchema.virtual('relativeTime').get(function() {
   return moment(this.postDate).fromNow();
+})
+
+postSchema.virtual('url').get(function() {
+  return '/feed/' + this.user.username + '/post/' + this._id
 })
 
 module.exports = mongoose.model('Post', postSchema);

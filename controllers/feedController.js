@@ -23,7 +23,7 @@ exports.feed = [
         if (err) return next(err)
 
         res.render('feed', {
-          title: "Share Your Story To Be Heard | Clubhouse 🧠 💡",
+          title: "Share Your Story To Be Heard | Overheard 🧠 💡",
           user: req.user,
           feed: result
         })
@@ -41,7 +41,8 @@ exports.feed_post = [
       user: req.user,
       postDate: new Date(),
       postTitle: req.body.title,
-      postContent: res.locals.content
+      postContent: res.locals.content,
+      postContentPreview: req.body.preview
     })
 
     post.save((err) => {
@@ -50,3 +51,16 @@ exports.feed_post = [
     })
   }
 ]
+
+exports.feed_user_post = (req, res) => {
+  Post.findById(req.params.id)
+    .populate('user')
+    .exec((err, result) => {
+      if (err) return next(err);
+      res.render('post', {
+        user: req.user,
+        title: `${result.postTitle} by ${result.user.username}`,
+        data: result 
+      })
+    })
+}
