@@ -15,6 +15,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
     @layer utilities {
+      html, body {
+        height: 100%
+      }
+
       body {
         font-size: 1rem;
       }
@@ -70,11 +74,14 @@
 </head>
 
 <body>
-  <section id="header">
-    <%- header %> 
-  </section>
-  <section id="main" class="flex flex-col w-full">
-    <%- main %>
-  </section>
+  <div id="container" class="flex flex-col h-full">
+    <section id="header">
+      <%- header %>
+    </section>
+    <section id="main" class="flex flex-col h-full py-12">
+      <%- main %> 
+    </section>
+  </div>
 </body>
+
 </html>

@@ -15,6 +15,7 @@ const User = require('./models/user');
 
 const indexRoute = require('./routes/index');
 const feedRoute = require('./routes/feed');
+const bcrypt = require('bcryptjs/dist/bcrypt');
 
 
 const app = express();
@@ -42,15 +43,15 @@ passport.use(new LocalStrategy((username, password, done) => {
         message: 'user is not existed'
       })
     } else {
-      if (password !== user.password) {
-        console.log('incorrect password');
-        return done(null, false, {
-          message: 'incorrect password'
-        })
-      }
-
-      console.log(user.name + ' is logged in');
-      return done(null, user)
+      bcrypt.compare(password, user.password, (err, res) => {
+        if (res) {
+          // password match
+          return done(null, user)
+        } else {
+          // password don't match
+          return done(null, false, { message: 'Password don\'t match' });
+        }
+      })
     }
   })
 }))

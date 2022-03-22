@@ -15,7 +15,7 @@
 </header>
 
 <%- contentFor('main') %>
-<section id="feed" class="grid grid-cols-4 gap-4">
+<section id="feed" class="grid grid-cols-4 gap-4 h-full">
   <article id="sidebar" class="grid grid-rows-4 pl-8">
     <nav>
       <ul class="flex flex-col gap-3">
@@ -60,9 +60,9 @@
       </form>
     </div>
   </article>
-  <article class="col-span-2">
+  <article class="col-span-2 h-full">
     <h1>My Feed</h4>
-      <div id="platform-content" class="h-[36rem] flex flex-col overflow-y-scroll mt-4">
+      <div id="platform-content" class="h-full flex-1 flex flex-col overflow-y-scroll">
         <% feed.forEach(data => { %>
         <a href=<%- data.url %>>
           <%- include('./postcard', { data }) %>
