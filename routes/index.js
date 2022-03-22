@@ -5,17 +5,7 @@ const indexController = require('../controllers/indexController');
 
 router.get('/', indexController.index);
 
-router.get('/signup', (req, res) => {
-  res.render('signup', {
-    layout: '../views/layouts/sign-form',
-    title: 'Sign Up',
-    pageName: 'signup'
-  })
-});
-
-router.post('/signup', (req, res, next) => {
-  res.send('POST: NOT IMPLEMENTED')
-});
+router.post('/signup', indexController.signup_post);
 
 router.get('/login', indexController.login_get);
 router.post('/login', indexController.login_post);

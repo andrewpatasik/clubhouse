@@ -1,6 +1,8 @@
 <div class="postcard-container bg-white flex p-2 m-2 gap-2 border-b">
   <% if (!user) { %>
-  <div class="user-photo flex-shrink-0 rounded-full bg-gray-100 w-16 h-16 "></div>
+  <div class="user-photo flex flex-shrink-0 rounded-full bg-gray-100 w-16 h-16 justify-center items-center font-bold">
+    <span>A</span>
+  </div>
   <% } else { %>
   <div class="user-photo flex flex-shrink-0 rounded-full bg-gray-100 w-16 h-16 justify-center items-center font-bold">
     <span><%= data.user.name[0] %></span>
