@@ -6,7 +6,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
       </svg>
-      <h5 class="tracking-wide">Overheard</h5>
+      <h5 class="tracking-wide">Klubhaus</h5>
     </div>
     <ul class="tracking-wide">
       <%- include('./logoutButton') %>
@@ -62,7 +62,7 @@
   </article>
   <article class="col-span-2 h-full">
     <h1>My Feed</h4>
-      <div id="platform-content" class="h-full flex-1 flex flex-col overflow-y-scroll">
+      <div id="platform-content" class="h-full flex-1 flex flex-col overflow-y-auto">
         <% feed.forEach(data => { %>
         <a href=<%- data.url %>>
           <%- include('./postcard', { data }) %>

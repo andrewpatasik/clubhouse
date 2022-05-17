@@ -6,7 +6,7 @@
       <div id="tagline" class="absolute inset-0 flex justify-center items-center">
         <div class="flex flex-col gap-2 bg-white text-center p-3 border border-8 border-indigo-500">
           <h1 class="text-6xl">Share Story,<br>Be Heard.</h1>
-          <h6>Overheard is a platform to share your stories<br>and engage with like-minded people</h6>
+          <h6>Klubhaus is a platform to share your stories<br>and engage with like-minded people</h6>
         </div>
       </div>
     </article>
@@ -17,7 +17,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
           </svg>
-          <h5 class="tracking-wide">Overheard</h5>
+          <h5 class="tracking-wide">Klubhaus</h5>
         </div>
         <ul class="tracking-wide">
           <%- include('./loginButton', {
@@ -35,13 +35,13 @@
             <label for="fullname" class="text-sm">Fullname:</label>
             <input
               class="rounded-sm border-b border-blue-200 outline-none p-1 focus:border-blue-500 transition ease-in-out"
-              type="text" name="fullname" id="fullname" placeholder="Eren Jeager" required>
+              type="text" name="fullname" id="fullname" placeholder="Bruce Wayne" required>
           </div>
           <div class="element-container w-9/12 flex flex-col font-bold">
             <label for="username" class="text-sm">Username:</label>
             <input
               class="border-b rounded-sm border-blue-200 outline-none p-1 focus:border-blue-500 transition ease-in-out"
-              type="text" name="username" id="username" placeholder="@erenrumbling" required>
+              type="text" name="username" id="username" placeholder="@brucewayne" required>
           </div>
           <div class="element-container w-9/12 flex flex-col font-bold">
             <label for="password" class="text-sm">Password:</label>
@@ -64,12 +64,12 @@
 <%- contentFor('main') %>
 <section id="platform" class="grid grid-cols-3 gap-4">
   <article class="grid grid-rows-4 justify-end items-end">
-    <h6 class="tracking-wide">Your identity will be kept anonymous in public,<br>only your story what matters in
-      Overheard.</h6>
+    <h6 class="tracking-wide bg-indigo-500 text-white p-4 rounded-md">Your identity will be kept anonymous in public,<br>only your story what matters in
+      Klubhaus.</h6>
   </article>
   <article>
-    <h3 class="text-indigo-500 text-center">Take A Sneek-Peek To Overheard</h3>
-    <div id="platform-content" class="h-[30rem] flex flex-col my-20 overflow-y-scroll">
+    <h3 class="text-indigo-500 text-center">Take A Sneek-Peek To Klubhaus</h3>
+    <div id="platform-content" class="h-[30rem] flex flex-col my-20 overflow-y-auto">
       <% feed.forEach(data => { %>
       <%- include('./postcard', { data }) %>
       <% }) %>
@@ -79,6 +79,32 @@
     <div></div>
     <div></div>
     <div></div>
-    <h6 class="tracking-wide">Read other people story and find what really speaks to you.</h6>
+    <div>
+      <h6 class="tracking-wide bg-indigo-500 text-white p-4 rounded-md">Read other people story and find what really speaks to you.</h6>
+    </div>
   </article>
 </section>
+<section id="population" class="w-full text-center my-24">
+  <h3 class="text-indigo-500 text-center">Platform That Keeps Growing</h3>
+  <article class="flex h-96 justify-evenly items-center">
+    <div class="text-center">
+      <h2 class="text-7xl font-bold"><%= member.length %></h2>
+      <span class="text-xl">Active Members</span>
+    </div>
+    <div class="text-center">
+      <h2 class="text-7xl font-bold"><%= feed.length %></h2>
+      <span class="text-xl">Posts Created</span>
+    </div>
+  </article>
+</section>
+<section class="flex flex-col items-center bg-indigo-500 gap-14 pt-4">
+  <article class="text-center">
+    <h3 class="text-white">Join Klubhaus</h3>
+    <p class="text-xl text-white mt-4">Share Ideas, Make friends, Engage Conversation</p>
+  </article>
+  <button
+  class="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white font-bold py-3 px-5 rounded-full border-2 border-white"
+  type="submit"><span class="text-xl">Sign Up</span></button>
+</section>
+<%- contentFor('footer') %>
+<%- include('footer') %> 
